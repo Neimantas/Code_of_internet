@@ -1,0 +1,9 @@
+C:\Users\neimantas\documents\visual studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\Requirement.exe.config
+C:\Users\neimantas\documents\visual studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\Requirement.exe
+C:\Users\neimantas\documents\visual studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\Requirement.pdb
+C:\Users\neimantas\documents\visual studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\Requirement.exe
+C:\Users\neimantas\documents\visual studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\Requirement.pdb
+C:\Users\neimantas\documents\visual studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\Requirement.csprojResolveAssemblyReference.cache
+C:\Users\neimantas\Documents\Code_of_internet\ConsoleApplication1\bin\Debug\Requirement.exe.config
+C:\Users\neimantas\Documents\Code_of_internet\ConsoleApplication1\obj\Debug\Requirement.exe
+C:\Users\neimantas\Documents\Code_of_internet\ConsoleApplication1\obj\Debug\Requirement.pdb
