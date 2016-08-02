@@ -17,13 +17,12 @@ namespace Requirement_2_0
     /// </summary>
     public class DotNetBackendDevelopersWanted 
     {
-        //Fill list with requirements needed.
         private static readonly List<Requirement> MainRequirements = FillMainRequirements();
-        private static int _counteris;
+        private static int _counter;
 
         private static void Main()
         {
-            Console.WriteLine(SkillsCheck()
+            Console.WriteLine(CheckIfDevMeetsReqs()
                 ? "You are what we are looking for, please write us john.doe@programmer.com"
                 : "We need more experienced person, but good luck next time!");
 
@@ -31,7 +30,7 @@ namespace Requirement_2_0
         }
 
         /// <summary>
-        /// This method contains all of the requirements for .Net position.
+        /// This method contains all of the requirements for the .Net position.
         /// </summary>
         private static List<Requirement> FillMainRequirements()
         {
@@ -49,17 +48,17 @@ namespace Requirement_2_0
         /// <summary>
         /// We check if candidate has mininum skills needed.
         /// </summary>
-        public static bool SkillsCheck()
+        public static bool CheckIfDevMeetsReqs()
         {
             Console.WriteLine("Please tell us if you are experienced with:");
             foreach (var req in MainRequirements)
             {
                 Console.WriteLine(req.Term);
                 Console.WriteLine("YES/NO");
-                Counter();
+                CheckTyposAndIncrementCounter();
             }
 
-            if (_counteris >= 4)
+            if (_counter >= 4)
             {
                 return true;
             }
@@ -69,7 +68,7 @@ namespace Requirement_2_0
         /// <summary>
         /// This methods checks for typos. Also some people think that recursion is some kind of magic. It is not.
         /// </summary>
-        private static void Counter()
+        private static void CheckTyposAndIncrementCounter()
         {
             var readLine = Console.ReadLine();
 
@@ -77,14 +76,14 @@ namespace Requirement_2_0
                 if (answerCheck == "Bad")
                 {
                     Console.WriteLine("You made a typo, try again");
-                    Counter();
+                    CheckTyposAndIncrementCounter();
                 }
 
                 var answer = readLine.ToUpper();
 
                 if (answer == "YES")
                 {
-                    _counteris += 1;
+                    _counter += 1;
                 }
 
         }
