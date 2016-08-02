@@ -19,6 +19,7 @@ namespace Requirement_2_0
     {
         //Fill list with requirements needed.
         private static readonly List<Requirement> MainRequirements = FillMainRequirements();
+        private static int _counteris;
 
         private static void Main()
         {
@@ -50,16 +51,15 @@ namespace Requirement_2_0
         /// </summary>
         public static bool SkillsCheck()
         {
-            int counter = 0;
             Console.WriteLine("Please tell us if you are experienced with:");
             foreach (var req in MainRequirements)
             {
                 Console.WriteLine(req.Term);
                 Console.WriteLine("YES/NO");
-                counter = Counter(counter);
+                Counter();
             }
 
-            if (counter >= 4)
+            if (_counteris >= 4)
             {
                 return true;
             }
@@ -69,26 +69,24 @@ namespace Requirement_2_0
         /// <summary>
         /// This methods checks for typos. Also some people think that recursion is some kind of magic. It is not.
         /// </summary>
-        private static int Counter(int counter)
+        private static void Counter()
         {
             var readLine = Console.ReadLine();
-            if (readLine != null)
-            {
+
                 var answerCheck = (readLine.ToUpper() == "YES" || readLine.ToUpper() == "NO") ? "Good" : "Bad";
                 if (answerCheck == "Bad")
                 {
                     Console.WriteLine("You made a typo, try again");
-                    Counter(counter);
+                    Counter();
                 }
 
                 var answer = readLine.ToUpper();
 
                 if (answer == "YES")
                 {
-                    counter += 1;
+                    _counteris += 1;
                 }
-            }
-            return counter;
+
         }
     }
 }
